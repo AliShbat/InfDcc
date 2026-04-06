@@ -40,7 +40,7 @@ const Creditcard = () => {
             <div className="col-12">
               <div className="card h-100 shadow-sm">
                 <img
-                  src="/cart7.jpg"
+                  src="/InfDcc/cart7.jpg"
                   className="card-img-top "
                   alt="Card Title"
                 />
