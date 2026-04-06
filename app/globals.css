@@ -1,0 +1,101 @@
+@import 'tailwindcss';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    height:auto
+}
+/* حاوية الشريط المتحرك */
+/* حاوية الشريط المتحرك */
+.ticker-container {
+  width: 100%;
+  overflow: hidden; /* إخفاء العناصر خارج الحدود */
+  border: 1px solid #247799;
+  padding: 5px 0;
+  white-space: nowrap;
+}
+
+/* الأنميشن الخاص بالحركة */
+.ticker-scroll {
+  display: inline-block;
+  animation: ticker 30s linear infinite; /* سرعة الحركة */
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* التحرك لنصف العرض لتكرار الحركة بسلاسة */
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 30px;
+  font-weight: bold;
+}
+
+.rate-up { color: #198754; }   /* لون أخضر للارتفاع */
+.rate-down { color: #dc3545; } /* لون أحمر للانخفاض */
+
+.social-icon {
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: rgba(255, 193, 7, 0.1);
+  transform: translateY(-3px);
+}
+
+/* لضمان التوجيه الصحيح في Next.js */
+[dir="rtl"] .ms-2 {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* لضمان أن الكروت تتغير ألوانها بسلاسة */
+.card {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.btn-floating-theme {
+  position: fixed;
+  bottom: 30px; /* المسافة من الأسفل */
+  left: 30px;   /* المسافة من اليسار (بما أن الموقع عربي) */
+  z-index: 9999; /* لضمان ظهوره فوق كل شيء */
+  width: auto;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+}
+
+.btn-floating-theme:hover {
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2) !important;
+}
+
+/* تأثير التبديل الناعم للموقع بالكامل */
+[data-bs-theme="dark"] body {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* تنعيم حركة التغيير */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

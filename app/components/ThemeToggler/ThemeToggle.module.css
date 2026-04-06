@@ -1,0 +1,32 @@
+.floatingWrapper {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 9999;
+  /* إضافة انتقال ناعم للظهور والإخفاء */
+  transition: all 0.5s ease-in-out;
+  opacity: 0; /* مخفي في البداية */
+  transform: translateY(100px); /* نازل للأسفل خارج الشاشة */
+}
+
+/* كلاس سيتم إضافته عند السكرول */
+.showToggle {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btnFloatingTheme {
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.3s ease;
+}
+
+.btnFloatingTheme:hover {
+  transform: scale(1.1);
+}
