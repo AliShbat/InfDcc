@@ -23,7 +23,7 @@ const Creditcard = () => {
                     </h5>
                   </div>
                   <img
-                    src="/cart1.jpg"
+                    src="/InfDcc/cart1.jpg"
                     className="card-img-top "
                     alt="Card Title"
                   />

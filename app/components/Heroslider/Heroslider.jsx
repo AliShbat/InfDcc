@@ -4,7 +4,7 @@ const Heroslider = () => {
     <div>
       <Image
         alt="page"
-        src="/damas.jpg"
+        src="/InfDcc/damas.jpg"
         width={2000}
         height={2400}
       ></Image>
